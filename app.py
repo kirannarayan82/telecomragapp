@@ -9,6 +9,10 @@ retriever = SentenceTransformer('all-MiniLM-L6-v2')
 # Initialize the text generation model
 generation_pipeline = pipeline('text2text-generation', model='facebook/bart-large-cnn')
 
+st.title('RAG-based Customer Support Assistant')
+
+query = st.text_input('Enter your query:')
+
 # Load CSV files
 queries_df = pd.read_csv('queries.csv')
 responses_df = pd.read_csv('responses.csv')
@@ -30,9 +34,7 @@ def generate_response(query, docs):
     result = generation_pipeline(input_text, max_length=200)
     return result[0]['generated_text']
 
-st.title('RAG-based Customer Support Assistant')
 
-query = st.text_input('Enter your query:')
 if query:
     retrieved_docs, retrieved_resps = retrieve_docs(query, documents)
     response = generate_response(query, retrieved_docs)
