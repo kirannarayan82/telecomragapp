@@ -1,16 +1,13 @@
 import streamlit as st
 import pandas as pd
-from transformers import pipeline, RagRetriever, RagTokenForGeneration, RagConfig
+from transformers import pipeline
 from sentence_transformers import SentenceTransformer, util
 
-# Initialize the retriever and generator models
+# Initialize the retriever model
 retriever = SentenceTransformer('all-MiniLM-L6-v2')
 
-# Configure and initialize RAG
-config = RagConfig.from_pretrained('facebook/rag-token-nq')
-generator = RagTokenForGeneration.from_pretrained('facebook/rag-token-nq', config=config)
-retrieval_tokenizer = pipeline('feature-extraction', model='facebook/dpr-ctx_encoder-single-nq-base')
-generation_pipeline = pipeline('text2text-generation', model=generator)
+# Initialize the text generation model
+generation_pipeline = pipeline('text2text-generation', model='facebook/bart-large-cnn')
 
 # Load CSV files
 queries_df = pd.read_csv('queries.csv')
