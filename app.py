@@ -14,7 +14,7 @@ queries_df = pd.read_csv('queries.csv')
 responses_df = pd.read_csv('responses.csv')
 
 documents = queries_df['query'].tolist()
-responses = responses_df['response'].tolist()
+responses = queries_df['response'].tolist()
 
 def retrieve_docs(query, docs, top_k=2):
     embeddings = retriever.encode(docs, convert_to_tensor=True)
