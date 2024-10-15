@@ -33,7 +33,7 @@ def generate_response(query, docs):
     input_text = f"Query: {query} Context: {' '.join(docs)}"
     result = generation_pipeline(input_text, max_length=200)
     return result[0]['generated_text']
-
+print("this is the rag response")
 
 if query:
     retrieved_docs, retrieved_resps = retrieve_docs(query, documents)
