@@ -1,5 +1,11 @@
-How to reset my password?
-How to track my order?
-How to return a product?
-How to contact customer support?
-How to update my profile information?
+query_id,query,response
+1,How can I reset my password?,To reset your password, go to the account settings and select "Reset Password". Follow the instructions provided.
+2,What are your data plans?,Our data plans include unlimited data, calls, and texts. Visit our website for more details.
+3,How do I activate my SIM card?,To activate your SIM card, follow these steps: insert the SIM card into your phone, turn on the phone, and follow the activation instructions.
+4,I am not receiving any network signal.,Please check if your phone is in Airplane mode or try restarting your device. If the issue persists, contact our customer support.
+5,How can I check my remaining data balance?,You can check your remaining data balance through our mobile app or by dialing *123# from your phone.
+6,Can I change my plan online?,Yes, you can change your plan online by logging into your account and selecting the "Change Plan" option.
+7,What are the international roaming charges?,International roaming charges vary by country. Please visit our website to view the rates for your destination.
+8,How to contact customer support?,You can contact our customer support through our website, mobile app, or by calling our helpline at 1-800-123-456.
+9,My bill shows extra charges I don't understand.,Please review the detailed bill available in your account. If you still have questions, contact our billing support team.
+10,How can I enable VoLTE on my phone?,To enable VoLTE, go to your phone settings, select "Mobile Networks," and toggle the VoLTE switch to "On".
