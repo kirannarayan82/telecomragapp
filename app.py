@@ -42,5 +42,3 @@ if query:
     for doc, resp in zip(retrieved_docs, retrieved_resps):
         st.write(f"Retrieved Query: {doc}\nResponse: {resp}")
 
-if __name__ == '__main__':
-    st.write('Customer Support Assistant is running...')
