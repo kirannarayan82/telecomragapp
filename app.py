@@ -42,3 +42,6 @@ if query:
     for doc, resp in zip(retrieved_docs, retrieved_resps):
         st.write(f"Retrieved Query: {doc}\nResponse: {resp}")
 
+else:
+    print("Sorry unable to answer your query: will connect to a rep")
+
